@@ -9,6 +9,13 @@
   animation-timing-function: ease-in-out;
 }
 
+.scaleDown {
+  animation-name: scaleDown;
+  animation-duration: 150ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
 @keyframes scaleUp {
   0% {
     transform: scale(0);
@@ -17,4 +24,32 @@
   100% {
     transform: scale(1);
   }
+}
+
+@keyframes scaleDown {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+.btn-read-true {
+  background: #44964c;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.btn-read-false {
+  background: #810000;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.btn-remove {
+  background: #595959;
+  padding: 10px;
+  border-radius: 5px;
 }
