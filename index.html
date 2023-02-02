@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=deice-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="output.css" />
+    <script src="script.js" defer></script>
+    <title>Library || The Odin Project</title>
+  </head>
+  <body class="relative overflow-x-hidden bg-secondary">
+    <!-- nav start -->
+    <header class="flex h-[80px] w-screen bg-primary">
+      <h1 class="text-red mx-auto text-3xl font-bold leading-[80px] text-white">Library</h1>
+    </header>
+    <!-- nav end -->
+
+    <!-- main start -->
+    <main class="mt-10">
+      <div class="container mx-auto flex flex-col items-center">
+        <!-- Add Button -->
+        <div id="btn-add" class="flex w-fit cursor-pointer justify-center gap-2 text-xl">
+          <i class="bi bi-plus-lg font-extrabold text-tertiary"></i>
+          <h2 class="text-center text-tSecondary">Add Book</h2>
+        </div>
+        <!-- Book Card Container -->
+        <div id="card-container" class="grid w-full grid-cols-1 items-stretch py-16 px-16 transition-all md:grid-cols-2 md:gap-4 lg:grid-cols-3 xl:grid-cols-4">
+          <!-- Card 1 -->
+          <!-- <div class="min-h-[200px]">
+            <div class="flex flex-col justify-between rounded-sm border border-slate-500 bg-primary p-6 text-center text-white">
+              <h2 class="text-xl font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ea, soluta labore dolore ullam aperiam rerum optio quisquam veritatis cumque.</h2>
+              <p>Author</p>
+              <p>Pages</p>
+              <a href="#">Yes, It's Been Read</a>
+              <a href="#">Remove</a>
+            </div>
+          </div>
+          <div class="min-h-[300px] border border-white align-middle">
+            <div class="flex h-full flex-col justify-between rounded-sm border border-slate-500 bg-primary p-6 text-center text-white">
+              <h2 class="text-xl font-bold">Judul</h2>
+              <p>Author</p>
+              <p>Pages</p>
+              <a href="#">Yes, It's Been Read</a>
+              <a href="#">Remove</a>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </main>
+    <!-- main end -->
+
+    <!-- modal start -->
+    <div id="modal" class="wrapper pointer-events-none absolute top-0 flex h-screen w-screen items-center justify-center bg-[rgba(0,0,0,0)] transition-all">
+      <div id="modal-inner" class="w-[260px] scale-0 rounded-md border-2 border-[rgba(250,250,250,0.3)] bg-secondary p-6">
+        <h3 class="mb-6 text-center text-lg font-semibold text-tSecondary">Add Book</h3>
+        <form action="#" class="flex flex-col">
+          <input maxlength="20" id="input-title" class="mb-4 rounded-sm border-2 border-[rgba(250,250,250,0.3)] bg-transparent px-2 py-1 text-white" type="text" placeholder="Title" aria-required="true" />
+          <input maxlength="10" id="input-author" class="mb-4 rounded-sm border-2 border-[rgba(250,250,250,0.3)] bg-transparent px-2 py-1 text-white" type="text" placeholder="Author" />
+          <input id="input-pages" class="mb-4 rounded-sm border-2 border-[rgba(250,250,250,0.3)] bg-transparent px-2 py-1 text-white" type="number" placeholder="Pages" />
+          <div class="mb-8 flex justify-center">
+            <h4 class="text-center text-tSecondary">Have You Read It?</h4>
+            <input id="input-checkbox" type="checkbox" class="ml-2 block bg-transparent" />
+          </div>
+          <input id="btn-submit" type="submit" value="Add" class="mb-1 cursor-pointer rounded-sm bg-tertiary py-1 text-lg font-semibold text-white" />
+        </form>
+      </div>
+    </div>
+    <!-- modal end -->
+  </body>
+</html>
